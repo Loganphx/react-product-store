@@ -1,4 +1,4 @@
-import {Container, SimpleGrid, Text, VStack} from "@chakra-ui/react";
+import {Container, SimpleGrid, Text, useColorModeValue, VStack} from "@chakra-ui/react";
 import {Link} from "react-router-dom";
 import {useEffect} from "react";
 import {useProductStore} from "../store/product.js";
@@ -10,7 +10,7 @@ const HomePage = () => {
         }, [fetchProducts]);
     console.log("products", products);
     return (
-        <Container maxW='container.xl'  py={12}>
+        <Container maxW='container.xl'  py={12} bg={useColorModeValue("white", "gray.900")}>
             <VStack spacing={8}>
                 <Text
                     bgGradient='linear(to-r, cyan.400, blue.500)'
@@ -35,14 +35,16 @@ const HomePage = () => {
                         <ProductCard key={product._id} product={product}/>
                     ))}
                 </SimpleGrid>
-                <Text fontSize='x1' textAlign={"center"} fontWeight='bold' color='gray.500'>
+                <div> {!products || products.length !== 0 ? <div></div> :  <Text fontSize='x1' textAlign={"center"} fontWeight='bold' color='gray.500'>
                     No products found {" "}
                     <Link to={"/create"}>
                         <Text as='span' color='blue.500' _hover={{textDecoration: 'underline'}}>
                             Create a product
                         </Text>
                     </Link>
-                </Text>
+                </Text>}
+                </div>
+
             </VStack>
         </Container>
     )

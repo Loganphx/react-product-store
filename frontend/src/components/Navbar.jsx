@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 
 const Navbar = () => {
     const {colorMode, toggleColorMode} = useColorMode();
-    return <Box as="header" w="100%" bg={useColorModeValue("red.100", "gray.900")}>
+    return <Box as="header" w="100%" bg={useColorModeValue("gray.100", "gray.900")}>
         <Container maxW="1140px" px={4} minW="1200px">
             <Flex
                 h={16}

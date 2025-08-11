@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar.jsx";
 
 function App() {
   return (
-    <Box bg={useColorModeValue("red.100", "gray.900")}>
+    <Box bg={useColorModeValue("white", "gray.900")}>
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<HomePage/>} />

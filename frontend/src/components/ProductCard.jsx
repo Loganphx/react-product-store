@@ -76,7 +76,7 @@ const ProductCard = ({product}) => {
             _hover={{transform: "translateY(-5px", shadow: "xl"}}
             bg={bg}
         >
-            <Image src={product.image} alt={product.name} h={48} w='full' objectFit='cover'
+            <Image src={product.image} alt={product.name} h={80} w='full' objectFit='cover'
                    fallbackSrc={fallbackUrl} // Chakra UI built-in fallback image prop (optional)
             />
             <Box p={4}>
