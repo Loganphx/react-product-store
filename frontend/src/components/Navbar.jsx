@@ -6,9 +6,9 @@ import {Link} from "react-router-dom";
 
 const Navbar = () => {
     const {colorMode, toggleColorMode} = useColorMode();
-    return <Box as="header" w="100%" bg={useColorModeValue("gray.100", "gray.900")}>
-        <Container maxW="1140px" px={4} minW="1200px">
-            <Flex
+    return <Box as="header" bg={useColorModeValue("gray.100", "gray.800")} width={"100%"}>
+        <Box px={4} margin={0} width={"100%"}>
+            <HStack
                 h={16}
                 w="100%"
                 alignItems={"center"}
@@ -35,8 +35,8 @@ const Navbar = () => {
                         {colorMode === "light" ? <IoMoon/> : <LuSun/>}
                     </Button>
                 </HStack>
-            </Flex>
-        </Container>
+            </HStack>
+        </Box>
     </Box>
 }
 export default Navbar

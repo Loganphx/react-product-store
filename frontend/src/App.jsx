@@ -6,8 +6,10 @@ import HomePage from "./pages/HomePage.jsx";
 import Navbar from "./components/Navbar.jsx";
 
 function App() {
-  return (
-    <Box bg={useColorModeValue("white", "gray.900")}>
+
+    const bgColor = useColorModeValue("white", "gray.900");
+    return (
+    <Box bg={bgColor} width="100%" height="100%">
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<HomePage/>} />

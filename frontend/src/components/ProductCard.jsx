@@ -17,7 +17,7 @@ const ProductCard = ({product}) => {
 
     const [updatedProduct, setUpdatedProduct] = useState(product);
     const textColor = useColorModeValue('gray.600', 'gray.200');
-    const bg = useColorModeValue('white', 'gray.800')
+    const bg = useColorModeValue('gray.100', 'gray.800')
     const fallbackUrl = 'https://static1.squarespace.com/static/530cd931e4b0e49b19b254ec/t/63c6068bcdde5a79958619df/1673922187854/final+logo++copy-1+%281%29.png?format=1500w';
 
 
@@ -69,12 +69,14 @@ const ProductCard = ({product}) => {
 
     return (
         <Box
+            id="productCard"
+            className="product-card"
             shadow='lg'
             rounded='lg'
             overflow='hidden'
             transition='all 0.3s'
-            _hover={{transform: "translateY(-5px", shadow: "xl"}}
             bg={bg}
+            _hover={{transform: "translateY(-5px)", shadow: "xl"}}
         >
             <Image src={product.image} alt={product.name} h={80} w='full' objectFit='cover'
                    fallbackSrc={fallbackUrl} // Chakra UI built-in fallback image prop (optional)
@@ -86,6 +88,7 @@ const ProductCard = ({product}) => {
 
                 <Text fontWeight='bold' fontSize='xl' color={textColor} mb={4}>
                     ${product.price.toFixed(2)}
+                    ${bg}
                 </Text>
 
                 <HStack spacing={2}>

@@ -5,12 +5,21 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+#root {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100% !important;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 a {
@@ -24,10 +33,12 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
+  display: inline-block;
   place-items: center;
   min-width: 320px;
-  min-height: 100vh;
+  height:100%;
+  width: 100%;
+
 }
 
 h1 {
@@ -59,9 +70,11 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }

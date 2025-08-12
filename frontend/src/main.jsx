@@ -8,7 +8,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
       <BrowserRouter>
           <ChakraProvider>
-          <App />
+          <App/>
           </ChakraProvider>
       </BrowserRouter>
   </StrictMode>,
